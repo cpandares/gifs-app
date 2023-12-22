@@ -5,9 +5,12 @@
     <h3 class="text-white">Gif App </h3>
     <hr class="text-white"> 
 
-    <div class="list-group list-reset">
-        <button class="list-group-item list-group-item-action">
-            Valorant
+    <div class="list-group list-reset" *ngFor="let tag of tags">
+        <button 
+            class="list-group-item list-group-item-action"
+            (click)="search(tag)"
+            >
+            {{ tag | titlecase }}
         </button>
     </div>
 
